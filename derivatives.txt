@@ -1,0 +1,14 @@
+9.5
+instrument, value depend on other value of undelying variables
+
+derivatives markets:
+exchange traded:contracts are standard  
+over-the-counter: can be non-standard]
+forward contract targetd OTC, and a futures contract is traded on an exchange
+
+option vs futures/forwards
+1. futures contract gives the holder the obligation to buy or sell at a certain price. while option gives the long t
+the right to exercise(buy or sell) at certain price
+
+futures contracts:
+settled daily with the exchange's Clearinghouse through the Margin Account
