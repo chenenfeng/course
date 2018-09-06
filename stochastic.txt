@@ -1,0 +1,55 @@
+1. Probability space
+(1)omiga contains all outcomes 
+w=w1, w2, w3,...   w=H T
+(2) sigma-algebra
+F is collection of subsets oin omiga
+   a. empty in F
+   b. A in F, A complment also will in F
+   c. if A1, A2, ... Ai,... in F, their infinite union of Ai in F
+
+(3) Probability measure P  F->[0,1]
+    a. P(omiga) = 1
+    b. P(infinite union of Ai) = sum of P(Ai) when Ai in F and they are disjoint
+  (omiga, F, P) <- prob space
+
+Q1.1
+i) A,B in F, A is subset of B then P(A) < P(B)
+ii) A in F   An n from 1 to infinite in F, lim P(An) = 0 and A is subset of An =>P(A) = 0
+solutions:
+i) B = A U (B/A)
+ii) A is subset of An for any n, so P(A) <= lim P(An) 
+
+Q1.2 omiga infinite is uncountably infinite
+countable set: a set with the same cardinality as the set of natural #
+uncountable set： infinite set whose cardinal number > that of the set of the natural #
+A={w = w1w2w3..., w1=w2, w3=w4,...}
+  i) A is uncountably infinite
+  ii) when 0<p<1  P(A) = 0
+solution:
+i)
+w = w1w2w3...
+w' =w1w1w2w2w3w3...
+so A<->omiga infinite, therefore A is uncountably infinite
+ii)
+first twice coin toss is HH or TT,  A is subset
+P(A) <= p^2+(1-p)^2
+first fourth coin tois is HHHH, HHTT, TTHH, TTTT
+P(A) <= [p^2+(1-p)^2]^n for any n
+because p^2+(1-p)^2 <1 when 0<p<1
+
+Q1.3 for any subset A of [0,1], def: P(A) = 0 if A is a finite set, P(A) = infinite if A is an infinite set
+i) P(empty) = 0
+ii) P(AUB) = P(A)+P(B)   A intersect B equals empty
+iii) P(U Ai) = sum of P(Ai)  i from 1 to N
+iv) same as iii), but i from 1 to infinite, prove the equaltion don't exsit
+solution:
+  i) empty is not infinite
+  ii) discussion: A and B is finite, at least A and B is a infinite set
+  iv) although Ai are all finite set, union of them are infinite
+  
+Q1.4
+i) construct a standard normal r,v, Z on the (omiga infinite, F infinite, P) for P=1/2
+ii)
+solution:
+  i) omiga infinite = {w:w=w1w2w3...}  Yn(w) = 1 if wn=H, Yn(w) = 0 if wn = T
+      Yn: omiga -> {0,1}
