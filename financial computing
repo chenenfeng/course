@@ -1,0 +1,30 @@
+9.10
+int argc, char** argv
+argc: number of arguments,  argv: arguments store list  argv[i]: the ith argument
+gcc -c hello.c   hello.c then become hello.o
+$ ./a.exe firstarg secondarg thirdarg,    argc = 4
+%hd short int
+%lf double
+
+Monte Carlo similuation                 
+generate random number 0-32767, define result of head(1) if number bigger than 16383, tails(0) otherwise
+
+do fx traia
+
+srand(1);    // set random seed 
+for(trail = 0; trail<=ntrail;trail++) 
+{
+  //initialize current run and max run size for this trail
+  //repeat 1000 times
+  for(toss = 0; toss <= ntosses; toss+=)
+  {
+      number = rand()
+  }
+  
+if max_runsize>=threshold
+{
+    count++;
+}
+}
+
+%lf (double)count/(double)
