@@ -1,0 +1,27 @@
+9.11
+probabilistic analysis, randomized quicksort
+inject randomness into algorithms
+
+basic quicksort:
+1. choose a pivot p
+2. compare p to other elements, less than p will form a list L, larger than p will form a list G
+3. L p G follow (pivot is in right position)
+4. recursive on L, G
+running time theta(n^2)
+
+randomized quicksort will pick a pivot p uniformly at random from the elements
+running time: O(nlogn)
+
+ex: ross two dices
+sample space: set of outcomes may happen
+event: subset of sample space
+random variable: map for sample space to real number
+
+expectation  linearity!!
+expectation: r.v. avaerage value across the sample space, but weighted by probability for every situation happen
+conditional probability: promise A must happen, so Pr[B|A] = pr[A intersect B happen]/pr[A happen]
+
+two magic definition
+X: total number of comparison in quicksort
+ei: the ith smallest element in given array
+Xij: indicator random variable, when ei and ej get compared, Xij = 1, otherwise, Xij = 0
