@@ -12,3 +12,8 @@ the right to exercise(buy or sell) at certain price
 
 futures contracts:
 settled daily with the exchange's Clearinghouse through the Margin Account
+
+
+9.12
+Interest Rate
+future value
