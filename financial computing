@@ -28,3 +28,9 @@ if max_runsize>=threshold
 }
 
 %lf (double)count/(double)
+
+
+
+9.12
+use monte carlo to generate brownian path
+to gain probability of Bt > 1
