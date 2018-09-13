@@ -25,3 +25,8 @@ two magic definition
 X: total number of comparison in quicksort
 ei: the ith smallest element in given array
 Xij: indicator random variable, when ei and ej get compared, Xij = 1, otherwise, Xij = 0
+
+9.13
+why normal quicksort has time complexity with O(n^2)?
+why randomized quicksort has time complexity with O(nlogn)?
+why don't we just randomly choose pivot, used quickselect to select median as pivot to give a determinent O(nlogn)
