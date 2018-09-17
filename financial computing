@@ -34,3 +34,49 @@ if max_runsize>=threshold
 9.12
 use monte carlo to generate brownian path
 to gain probability of Bt > 1
+
+9.17
+pointer   FILE *fp   fp = fopen("open.txt", "a") , be careful to "w", it will delete the content exsit
+fprintf(fp, "what is this file");
+fclose(fp);
+
+char c;  c = '\0', it is null character
+intialize a string: initialize char array  char s[30]  = "This is char array"
+printf("%s", s),   printf("%x", c): hex value of c
+for-loop try to printf null character
+
+operation to string!
+be careful to infinite while loop
+also do-while loop, slightly different: judge will at the last 
+if ()   break;   if()  continue;
+
+pointers
+int n;  complier set a storage bace for n, location in memory
+int m;
+int *p;  pointer,  can store location instead of value     like 0123ACF:n   0123ADC:m
+&:reference  *: dereference
+p = &n;  store location/address of n in p
+p = &m;  store address of m in p now!
+I don't want to know address, I want to know the value:
+*p <--- value of int in location that p is storing, deferencing a pointer
+printf("%p", p);
+int i = 63;   p = &i;  *p=193;  printf("%d",i); result will be 193
+
+p points function:
+duoble mysquare(double x){return x*x};
+double (*p)(double);  pointer that points to a function that return double and has double as an argument
+p = &mysquare
+printf("%lf",(*p)(x))
+
+integerate
+double integerate(double (*f)(double));  // I don't need name for specific function to pass reference to integrate
+
+pass pointer to point function can avoid copy that function and call it over and over again
+reset a value in i in sub function, will it change in the main function?? NO!!!!
+This is C function use "call by value", function know what the value is, but it doesn't know where the memory location 
+of this argument is. So this function can't change this argument in main function(memory).
+
+we need to pass address to C function, pass location/pointer  void function(int *p)
+That calls passing a reference "call by reference"
+
+
