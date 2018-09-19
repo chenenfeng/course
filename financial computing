@@ -79,4 +79,21 @@ of this argument is. So this function can't change this argument in main functio
 we need to pass address to C function, pass location/pointer  void function(int *p)
 That calls passing a reference "call by reference"
 
+9.19
+ODE  dX(t)/dt = f(X(t), t),  velocity depends on position and time
+at instant t move by dX(t) in small amount of dt
+Euler-Scheme -- numercial solution method:
+X(0) = x0
+X(delta) = f(X(0),0)*delta
+X(2*delta) = X(delta)+f(X(delta),delta)*delta
 
+Stochastic PDE: 
+dX(t) = f(X(t),t)dt + g(X(t),t)dB(t)
+first item: determinants  second item:random amount B(t), brownian motion. dB(t): dt*jump, change in BM between t to t+dt
+dB(t) = B(t+dt)-B(t)
+
+Stochastic Euler Scheme, will produce random realization
+X(delta) = X0
+X(delta) = f(X(0),0)*delta+g(X(0),0)*sqrt(delta)*sign
+
+dXt=miu*dt+sigma*dB(t)
