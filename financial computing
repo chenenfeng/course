@@ -97,3 +97,24 @@ X(delta) = X0
 X(delta) = f(X(0),0)*delta+g(X(0),0)*sqrt(delta)*sign
 
 dXt=miu*dt+sigma*dB(t)
+special case: (1) sigma = 0,  Xt = miu*t
+(2) miu = 0, sigma = 1,  Xt = Bt
+(3) miu = 0, sigma = 2
+(4) miu > 0, sigma > 0  drifting along, random fluctuation. drift and volatility term
+
+don't know array size, want flexible, use malloc
+malloc() take n*sizeof(int) as argument.   return void pointer
+double *p;  pointer to double
+int x[1000];  static allocation of memory
+int *p;    p  = (int *)   malloc(1000*sizeof(int))   tells me where is the first int
+pointer to unspecified type, then convert   p[0],p[1],...p[999]
+free(p);   //free the allocated space for later use
+for i in range (1000):
+  print(p[i])
+pointer don't move, just point p[0] address
+after free(p),  p still point same direction, not NULL， but this address is ineffect, can't be used.
+
+memory leak
+don't reassign the p to new malloc, or the old assigned memory will lost
+
+rand（）
