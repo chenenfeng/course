@@ -1,0 +1,4 @@
+python use timsort in its .sort() function  O(nlogn) in average and worse case.
+it is combination of merge sort and insert sort.
+For the analysis of time complexity of randomized algorithm, I just need to define the X like total comparison times
+and calculate E[X]=sum(P(X=x)*x)
