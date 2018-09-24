@@ -118,3 +118,66 @@ memory leak
 don't reassign the p to new malloc, or the old assigned memory will lost
 
 rand（）
+
+9.24
+double *p;
+p = (double *) malloc(n* sizeof (double))
+2d array = array of arrays
+2-d array of double:  double **p;  use p to allocate an array of pointer to double
+p = (double **) malloc (2* sizeof(double *));  
+p[0] = (double *) malloc (3*sizeof(double));
+p[1] = (double *) malloc (3*sizeof(double));
+p[0][0]  p[0][1]  p[0][2]
+free in reverse order, free p[i], then free p;
+
+p[i][j][k]  i=0 to m-1, j = 0 to n-1, k = 0 to q-1
+int i,j,k
+double p***
+p = (double ***) malloc (m*sizeof（double**）)
+for (i=0;i<m;i++)
+{
+  p[i] = (double **) malloc (n*sizeof(double*))
+  for (j=0;j<n;j++)
+  {
+    p[i][j] = (double *) malloc (q*sizeof(double))
+  }
+}
+
+int const i=20;
+i=30;  // can't compile
+int const k;
+k=20;  // can't compile, because declare something is constant must assign the value initially
+be care of scope
+
+const int *p;
+int *const p;
+
+int *p; int j; p=&j: assign address of j to p, p will store j's address
+*p = 47;  store 47 in p direction
+
+2 notions of const for a pointer
+ 1) protect the pointer to variable from being modified,   const int *p (pointer to a constant, the value reads only)
+ 2) protect the address that pointer stores from modification,    int *const p   (const pointer)
+ 
+!why pass a pointer to a function?
+  1) to modify value of variable pointed to in a function argument
+  2) for spped,  don't have to copy large data structure- just pass its address
+  
+what if pass some reference to some object but want to protect against it being modified by the function
+   pass a const pointer
+if you want to pass a const pointer, you must declare this pointer in main() as const
+
+void qsort( void *base       // start of this array, because qsort doesn't know what kind of type the objects are in the array
+            size_t nitems   // number of this array
+            size_t size  // size of object in array
+            int (*compare) (const void *, const void *) // pointer to comparison function
+)
+
+cast the void type argument to a specified type in the sub function!!
+
+void print_array (const void *ptr,
+                  unsigned int nitems,
+                  unsigned int size,
+                  void *print_item(const void *ptr)
+  
+  )
