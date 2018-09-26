@@ -181,3 +181,15 @@ void print_array (const void *ptr,
                   void *print_item(const void *ptr)
   
   )
+
+9.26
+pointer operation,  be careful to the sizeof pointer,
+for example, double *p; int *q
+p=q , *p++, p will point 8 types after q[0].
+
+Random number generator
+static   memory location stores function， only initialize one time, and hold the value of last time.
+
+string can't str1=str2,  do assignment must strcpy(str1,str2).
+
+struct futures_day_summary *p;
