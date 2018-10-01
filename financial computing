@@ -193,3 +193,20 @@ static   memory location stores function， only initialize one time, and hold t
 string can't str1=str2,  do assignment must strcpy(str1,str2).
 
 struct futures_day_summary *p;
+
+
+10.1
+declaration - determine the type of an object,  without allocating space for it.
+definition-- also allocate spcace
+int i,j  both declaration and definition
+double f(int, double)   just declaration
+double f(double x) { return(x*x)}   both declaration and definition
+
+how to declare variable without allocation: extern int j; (memeory allocated somewhere else, not here)
+extern can share variable names between different programs
+
+#include "mysquare.h"   so we don't need declare the function mysquare()  "" means find the .h file in main.c documently
+fib number recurrsively  stack  stack overflow
+
+collatz conjecture
+c(n) = n/2 if n is even, 3n+1 if n is odd
