@@ -210,3 +210,29 @@ fib number recurrsively  stack  stack overflow
 
 collatz conjecture
 c(n) = n/2 if n is even, 3n+1 if n is odd
+
+10.3
+cpp  #include<cstdlib>  no .h file
+#include<iostream>
+using namespace std;  // I have this so I don't need to write std::cout<< I can just write cout<<
+std::cout<<"what is your name" << std::endl;
+std::cin >> str;
+std::cout << "Well," << str << "you are a super C/C++ programmer" << std::endl;
+
+refer thing in global scope
+int n=8732
+int main(){ cout << "::n =" << ::n << endl;}
+
+try, catch
+a = stoi(s) //string to int
+while (1)
+{
+  try{
+      }
+  catch{}
+}
+
+int &n = m // passing a reference
+
+if n==0 throw zero;
+catch(char *result)
