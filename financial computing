@@ -236,3 +236,40 @@ int &n = m // passing a reference
 
 if n==0 throw zero;
 catch(char *result)
+
+
+10.8
+cpp
+reference is not same with pointer 
+int &n = m;  //that is reference
+n = k  // then m will also be k
+cin >> ind;  // receive input from user
+
+unhappy situation happen, we throw this object to catch.
+define unhappy situation using struct
+don't kill program if you encounter unhappy situation
+
+given default value to function arguments
+
+dynamic memory allocation:
+double *p;
+int m,n;
+n = 1000;
+p = new double[n];
+
+delete[] p;
+
+double **q;
+m = 4; n = 3;
+q = new double*[m];
+
+Container Class
+vector <double> w(n,0); //  vector size = n, all values are 0
+
+create objects that are automatically destroyed when they fall out of scope
+exp1: {create huge vector  create huge vector ...}
+exp2: {create huge vector}  {create huge vector}
+not like dynamic memory allocation, we need to free space by ourselves
+
+
+
