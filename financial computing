@@ -269,7 +269,32 @@ vector <double> w(n,0); //  vector size = n, all values are 0
 create objects that are automatically destroyed when they fall out of scope
 exp1: {create huge vector  create huge vector ...}
 exp2: {create huge vector}  {create huge vector}
-not like dynamic memory allocation, we need to free space by ourselves
+not like dynamic memory allocation, which we need to free space by ourselves
 
+10.10
+string str1 = "gu, my name is \n"
+str1.length()   str1.empty()  str1.clear()  str1.find(".")  str1.resize(10)
+str1.substr(5)
+char cstr[80];  strcpy(cstr, str1.c_str());  // convert c++ string to c string, c string is just an array of characters, don't have member function
+string str5 = str3 + str4  // overloading, plus has different meaning
+string str5 = "sjdj";  string str5("sjhd");  string str5{"sshjd"};
+
+stringstream strstream;
+strstream << inFile.rdbuf();  // pour inFlie as string into strstream
+strstream.get()  // it will automatically get next char
+
+while getline(ss, field, delimiter)
+{v.push_back(field)}
+when overloading choice is not clear, which means different overloading function all works for those arguments, 
+complier will report mistake.
+
+string concatenate_strings(int nstrings, char delia, ...)
+we need to create list of arguments
+
+a.exe 2>filename.txt   // after executing a.exe, error message will redirect to filename.txt
+assert(1>2);   assert((2<1)&&(assertion at line 32))
+it will have an expression says that (2<1)&&(assertion at line 32)
+#define NDEBUG    // skip all the assertion
+string 
 
 
