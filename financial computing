@@ -298,3 +298,49 @@ it will have an expression says that (2<1)&&(assertion at line 32)
 string 
 
 
+10.22
+class vs struct
+by default, member in class is private, in struct is public
+class myclass
+{
+public：
+    int m;
+    double x;
+};
+
+int main(){
+
+myclass c;
+c.m = 5  // member is private, unless you claim the member is public
+}
+
+why we creat private part:
+that is encapsulation, we only need to know how to use public interface
+
+orderbook 
+curde oil future on the CME
+order to buy: bid price, quantity      order to sell: ask  price, quantity
+price askquantity  bidquantity  three columns,  according to the timestamp
+
+capabilities we want to have:
+1. customs can place order, must be timestamped
+2. customers can cancel orders
+3. order book should notify: can't place order, can't cancel order, your trade was carried out
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
