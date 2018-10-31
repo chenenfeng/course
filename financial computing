@@ -327,8 +327,17 @@ capabilities we want to have:
 2. customers can cancel orders
 3. order book should notify: can't place order, can't cancel order, your trade was carried out
 
+10.31
+I am very sad, my note in 10.28 didn't save....
+In modern life, we have access to many electronic devices.
+Your TV has a remote control that you can use to turn the TV on/off.
+You drive a car to work. You take a picture on your digital camera. 
+All three of these things use a common pattern: They provide a simple interface for you to use (a button, a steering wheel, etc…) to perform an action. 
+simple interface!!!
 
+the seperation with implementation and interface is very useful in programming
 
+Encapsulation!! /information hidden
 
 
 
