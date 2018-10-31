@@ -338,8 +338,55 @@ simple interface!!!
 the seperation with implementation and interface is very useful in programming
 
 Encapsulation!! /information hidden
+1.Benefit: encapsulated classes are easier to use and reduce the complexity of your programs
+don't need to know which data type specificly, we just can use the class
+2.Benefit: encapsulated classes help protect your data and prevent misuse
+3.Benefit: encapsulated classes are easier to change
+public interface: setvalue()  getvalue()
+4.Benefit: encapsulated classes are easier to debug
+Rule: Only provide access functions when it makes sense for the user to be able to get or set a value directly.
+Rule: Getters should usually return by value or const reference, not non-const reference
 
+Constructors!
+So then how do we initialize a class with private member variables? The answer is through constructors.
 
+Unlike normal member functions, constructors have specific rules for how they must be named:
+    Constructors must have the same name as the class (with the same capitalization)
+    Constructors have no return type (not even void)
+    
+ Fraction frac; // Since no arguments, calls Fraction() default constructor
+ Fortunately, constructors can also be declared with parameters.
+ Note that we now have two constructors: a default constructor that will be called in the default case, and a second constructor that takes two parameters. 
+ These two constructors can coexist peacefully in the same class due to function overloading.
+ Rule: Use direct or uniform initialization with your classes
+ Rule: Do not copy initialize your classes  like Fraction six = Fraction(6); // Copy initialize a Fraction, will call Fraction(6, 1)
+ 
+ Generally speaking, it’s a good idea to always provide at least one constructor in your class.
+ 
+ Constructors actually serve two purposes. The primary purpose is to initialize objects that have just been created.
+ The secondary purpose is to determine whether creation of an object is allowed.
+ 
+#include <cassert>
+ 
+class Fraction
+{
+private:
+    int m_numerator;
+    int m_denominator;
+ 
+public:
+    // Default constructor
+    Fraction(int numerator=0, int denominator=1)
+    {
+        assert(denominator != 0);
+        m_numerator = numerator;
+        m_denominator = denominator;
+    }
+ 
+    int getNumerator() { return m_numerator; }
+    int getDenominator() { return m_denominator; }
+    double getValue() { return static_cast<double>(m_numerator) / m_denominator; }
+};
 
 
 
